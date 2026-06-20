@@ -4,6 +4,13 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Lakpa Sherpa — Full-Stack & Platform Engineer</title>
+<meta name="description" content="Lakpa Sherpa — Full-stack & platform engineer. Specializes in Java, Spring Boot, AWS, and applied AI."/>
+<link rel="canonical" href="https://lsherpa-beta.github.io/"/>
+<meta property="og:title" content="Lakpa Sherpa — Full-Stack & Platform Engineer"/>
+<meta property="og:description" content="I build reliable, production-ready software and own the infrastructure it runs on."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://lsherpa-beta.github.io/"/>
+<meta name="twitter:card" content="summary_large_image"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
 <style>
@@ -30,6 +37,27 @@ body{
   font-size:16px;
   line-height:1.7;
   overflow-x:hidden;
+}
+
+/* Skip link */
+.skip-link{
+  position:absolute;
+  left:-999px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+.skip-link:focus{
+  left:1rem;
+  top:1rem;
+  width:auto;
+  height:auto;
+  padding:.5rem 1rem;
+  background:var(--cyan);
+  color:var(--black);
+  border-radius:4px;
+  z-index:9999;
 }
 
 /* ── SCROLLBAR ── */
@@ -447,6 +475,12 @@ footer span{color:var(--cyan)}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
 @keyframes pulse-border{0%,100%{border-color:var(--border)}50%{border-color:var(--cyan)}}
 
+/* prefers-reduced-motion: disable non-essential animation */
+@media (prefers-reduced-motion: reduce){
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  html { scroll-behavior: auto; }
+}
+
 /* ── RESPONSIVE ── */
 @media(max-width:768px){
   nav{padding:1rem 1.5rem}
@@ -459,7 +493,9 @@ footer span{color:var(--cyan)}
 </head>
 <body>
 
-<canvas id="particles"></canvas>
+<a class="skip-link" href="#hero">Skip to content</a>
+
+<canvas id="particles" aria-hidden="true" role="presentation"></canvas>
 
 <!-- NAV -->
 <nav>
@@ -473,6 +509,8 @@ footer span{color:var(--cyan)}
     <li><a href="#contact" data-num="06">contact</a></li>
   </ul>
 </nav>
+
+<main>
 
 <!-- HERO -->
 <section id="hero">
@@ -488,8 +526,8 @@ footer span{color:var(--cyan)}
       </p>
       <div class="hero-cta">
         <a href="#projects" class="btn btn-primary">View Projects</a>
-        <a href="https://github.com/lsherpa-beta" target="_blank" class="btn btn-outline">GitHub ↗</a>
-        <a href="https://www.linkedin.com/in/lakpasherpa-2a787b262" target="_blank" class="btn btn-outline">LinkedIn ↗</a>
+        <a href="https://github.com/lsherpa-beta" target="_blank" rel="noopener noreferrer" class="btn btn-outline">GitHub ↗</a>
+        <a href="https://www.linkedin.com/in/lakpasherpa-2a787b262" target="_blank" rel="noopener noreferrer" class="btn btn-outline">LinkedIn ↗</a>
       </div>
     </div>
   </div>
@@ -665,7 +703,7 @@ footer span{color:var(--cyan)}
         <div class="project-top">
           <span class="project-icon">🤖</span>
           <div class="project-links">
-            <a href="https://github.com/lsherpa-beta/spring-ai-demo" target="_blank" title="GitHub">⎋ GitHub</a>
+            <a href="https://github.com/lsherpa-beta/spring-ai-demo" target="_blank" rel="noopener noreferrer" title="GitHub">⎋ GitHub</a>
           </div>
         </div>
         <div class="project-name">Spring AI Demo</div>
@@ -684,7 +722,7 @@ footer span{color:var(--cyan)}
         <div class="project-top">
           <span class="project-icon">🚇</span>
           <div class="project-links">
-            <a href="https://github.com/lsherpa-beta/mta-crowding-predictor" target="_blank" title="GitHub">⎋ GitHub</a>
+            <a href="https://github.com/lsherpa-beta/mta-crowding-predictor" target="_blank" rel="noopener noreferrer" title="GitHub">⎋ GitHub</a>
           </div>
         </div>
         <div class="project-name">MTA Crowding Predictor</div>
@@ -702,7 +740,7 @@ footer span{color:var(--cyan)}
         <div class="project-top">
           <span class="project-icon">🏗️</span>
           <div class="project-links">
-            <a href="https://github.com/lsherpa-beta" target="_blank" title="GitHub">⎋ GitHub</a>
+            <a href="https://github.com/lsherpa-beta" target="_blank" rel="noopener noreferrer" title="GitHub">⎋ GitHub</a>
           </div>
         </div>
         <div class="project-name">Microservices Portfolio</div>
@@ -764,69 +802,101 @@ footer span{color:var(--cyan)}
     </p>
     <div class="contact-links reveal">
       <a class="contact-link" href="mailto:l.sherpa2020@yahoo.com">📧 l.sherpa2020@yahoo.com</a>
-      <a class="contact-link" href="https://www.linkedin.com/in/lakpasherpa-2a787b262" target="_blank">💼 LinkedIn</a>
-      <a class="contact-link" href="https://github.com/lsherpa-beta" target="_blank">🐙 GitHub</a>
+      <a class="contact-link" href="https://www.linkedin.com/in/lakpasherpa-2a787b262" target="_blank" rel="noopener noreferrer">💼 LinkedIn</a>
+      <a class="contact-link" href="https://github.com/lsherpa-beta" target="_blank" rel="noopener noreferrer">🐙 GitHub</a>
     </div>
   </div>
 </section>
+
+</main>
 
 <footer>
   <p>Built with <span>♥</span> by Lakpa Sherpa &nbsp;·&nbsp; <span>Clean Code · Applied AI · Cloud</span></p>
 </footer>
 
 <script>
-// ── PARTICLES ──────────────────────────────────────────────────────────────
+// ── PARTICLES ────────────────────────────────────────────────────────────
 (function(){
   const canvas=document.getElementById('particles');
   const ctx=canvas.getContext('2d');
   let W,H,particles=[];
-  const resize=()=>{W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight};
+  const resize=()=>{
+    const dpr = window.devicePixelRatio || 1;
+    W=canvas.width=Math.floor(window.innerWidth * dpr);
+    H=canvas.height=Math.floor(window.innerHeight * dpr);
+    canvas.style.width = window.innerWidth + 'px';
+    canvas.style.height = window.innerHeight + 'px';
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+  };
   resize();window.addEventListener('resize',resize);
-  const N=80;
-  for(let i=0;i<N;i++) particles.push({
-    x:Math.random()*1920,y:Math.random()*1080,
-    vx:(Math.random()-.5)*.3,vy:(Math.random()-.5)*.3,
-    r:Math.random()*1.5+.5,
-    a:Math.random()*.5+.1
-  });
-  function draw(){
-    ctx.clearRect(0,0,W,H);
-    particles.forEach(p=>{
-      p.x+=p.vx;p.y+=p.vy;
-      if(p.x<0)p.x=W;if(p.x>W)p.x=0;
-      if(p.y<0)p.y=H;if(p.y>H)p.y=0;
-      ctx.beginPath();
-      ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-      ctx.fillStyle=`rgba(0,245,255,${p.a})`;
-      ctx.fill();
+
+  // Respect prefers-reduced-motion: if user prefers reduced motion, skip particle animation entirely
+  const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!prefersReduced) {
+    // Create particles using actual canvas size
+    const N = Math.round(Math.min(120, Math.max(30, (window.innerWidth * window.innerHeight) / (1920*1080) * 80)));
+    for(let i=0;i<N;i++) particles.push({
+      x:Math.random()*window.innerWidth,
+      y:Math.random()*window.innerHeight,
+      vx:(Math.random()-.5)*.3,vy:(Math.random()-.5)*.3,
+      r:Math.random()*1.5+.5,
+      a:Math.random()*.5+.1
     });
-    particles.forEach((a,i)=>{
-      particles.slice(i+1).forEach(b=>{
-        const dx=a.x-b.x,dy=a.y-b.y,d=Math.sqrt(dx*dx+dy*dy);
-        if(d<120){
-          ctx.beginPath();
-          ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);
-          ctx.strokeStyle=`rgba(0,245,255,${.08*(1-d/120)})`;
-          ctx.lineWidth=.5;ctx.stroke();
+
+    let animationId = null;
+    function draw(){
+      if (document.hidden) { animationId = requestAnimationFrame(draw); return; }
+      ctx.clearRect(0,0,canvas.width,canvas.height);
+      particles.forEach(p=>{
+        p.x+=p.vx;p.y+=p.vy;
+        if(p.x<0)p.x=window.innerWidth;if(p.x>window.innerWidth)p.x=0;
+        if(p.y<0)p.y=window.innerHeight;if(p.y>window.innerHeight)p.y=0;
+        ctx.beginPath();
+        ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+        ctx.fillStyle=`rgba(0,245,255,${p.a})`;
+        ctx.fill();
+      });
+      particles.forEach((a,i)=>{
+        for (let j=i+1;j<particles.length;j++){
+          const b = particles[j];
+          const dx=a.x-b.x,dy=a.y-b.y,d=Math.sqrt(dx*dx+dy*dy);
+          if(d<120){
+            ctx.beginPath();
+            ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);
+            ctx.strokeStyle=`rgba(0,245,255,${.08*(1-d/120)})`;
+            ctx.lineWidth=.5;ctx.stroke();
+          }
         }
       });
+      animationId = requestAnimationFrame(draw);
+    }
+
+    document.addEventListener('visibilitychange',()=>{
+      if (document.hidden) { if (animationId) cancelAnimationFrame(animationId); }
+      else draw();
     });
-    requestAnimationFrame(draw);
+
+    draw();
   }
-  draw();
 })();
 
-// ── TYPING HERO ────────────────────────────────────────────────────────────
+// ── TYPING HERO ───────────────────────────────────────────────────────────
 (function(){
-  const lines=[
+  const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const lines = [
     'Java & Spring Boot Engineer',
     'Cloud & Platform Engineer',
     'AI-Assisted Developer (Kiro + MCP)',
     'Clean Code Practitioner',
-    'M.S. Artificial Intelligence',
+    'M.S. Artificial Intelligence'
   ];
-  let li=0,ci=0,deleting=false;
   const el=document.getElementById('typed-text');
+  if (prefersReduced) {
+    // If reduced motion is preferred, show the first line without typing animation
+    if (el) el.textContent = lines[0];
+    return;
+  }
+  let li=0,ci=0,deleting=false;
   function type(){
     const line=lines[li];
     if(!deleting){
@@ -843,6 +913,12 @@ footer span{color:var(--cyan)}
 
 // ── SCROLL REVEAL ──────────────────────────────────────────────────────────
 (function(){
+  const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReduced) {
+    // If user prefers reduced motion, simply make reveal elements visible immediately
+    document.querySelectorAll('.reveal').forEach(el=>el.classList.add('visible'));
+    return;
+  }
   const obs=new IntersectionObserver((entries)=>{
     entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')});
   },{threshold:.12});
